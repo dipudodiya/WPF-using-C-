@@ -1,0 +1,56 @@
+﻿<Window x:Class="DipuDodiyaMidterm.EducationPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DipuDodiyaMidterm"
+        mc:Ignorable="d"
+        Title="EducationPage" Height="450" Width="800" Loaded="Window_Loaded">
+    <StackPanel HorizontalAlignment="Stretch">
+        <StackPanel Background="#B7CEEC" Height="432">
+
+
+            <Menu VerticalAlignment="Top"  Background="Pink" FontWeight="Bold">
+                <MenuItem HorizontalAlignment="Left" VerticalAlignment="Top" Header="_File" >
+                    <MenuItem Header="_New" x:Name="mnuNew" InputGestureText="Ctrl+N"/>
+                    <MenuItem Header="_Save" x:Name="mnuSave" InputGestureText="Ctrl+S"/>
+                    <Separator/>
+                    <MenuItem Header="E_xit" Click="MenuItem_Click_Exit"/>
+                </MenuItem>
+                <MenuItem HorizontalAlignment="Left" VerticalAlignment="Top" Header="_Edit"  >
+                    <MenuItem Header="_Insert" x:Name="mnuIns" InputGestureText="Ctrl+I" Click="mnuIns_Click"/>
+                    <MenuItem Header="_Update" x:Name="mnuUp" InputGestureText="Ctrl+U" Click="mnuUp_Click" />
+                    <MenuItem Header="_Delete" x:Name="mnuDel" InputGestureText="Ctrl+D" Click="mnuDel_Click"/>
+                </MenuItem>
+                <MenuItem HorizontalAlignment="Left" VerticalAlignment="Top" Header="_Help" Click="MenuItem_Click_Help">
+                </MenuItem>
+            </Menu>
+
+
+            <ListBox x:Name="lstPersons" SelectionChanged="lstPersons_SelectionChanged" Background="white"   Visibility="Hidden"/>
+
+            <ListBox x:Name="lstEducation" SelectionChanged="lstSportsPage_SelectionChanged" Background="white" Height="64" Width="425" HorizontalAlignment="Left"  />
+            <Button x:Name="btnAdd" Content="Add" Height="20" Width="48" Click="mnuIns_Click"  />
+            <Button x:Name="btnUpdate" Content="Update"  Height="20" Width="48" Click="mnuUp_Click"  RenderTransformOrigin="0.812,0.467" />
+            <Button x:Name="btnDelete" Content="Delete" Height="20" Width="48" Click="mnuDel_Click" />
+
+            <Label Content="Id"   FontSize="15" FontWeight="Bold" Background="pink" Width="48" HorizontalAlignment="Left" Margin="0,10,0,0" />
+            <TextBox x:Name="txtId" TextWrapping="Wrap"  IsReadOnly="True" Width="284" Height="20" HorizontalAlignment="Left" Text="Not Editable"/>
+            <Label Content="PersonID"   FontSize="15" FontWeight="Bold" Background="pink" Width="72" HorizontalAlignment="Left" />
+            <TextBox x:Name="txtPersonID" TextWrapping="Wrap"  IsReadOnly="True"  Width="284" Height="20" HorizontalAlignment="Left" Text="Not Editable"/>
+            <Label Content="Course Name"   FontSize="15" FontWeight="Bold" Background="pink" Width="106" HorizontalAlignment="Left" />
+            <TextBox x:Name="txtCourse" TextWrapping="Wrap" Width="284" Height="20" HorizontalAlignment="Left" />
+            <Label Content="Course Grade"   FontSize="15" FontWeight="Bold" Background="pink" Width="116" HorizontalAlignment="Left" Height="30" />
+            <TextBox x:Name="txtGrade"  TextWrapping="Wrap" Width="284" Height="20" HorizontalAlignment="Left"  />
+            <Label Content="Comments"  FontSize="15" FontWeight="Bold" Background="pink" Width="112" HorizontalAlignment="Left" Height="30" />
+            <TextBox x:Name="txtComments"  TextWrapping="Wrap"  Width="284" Height="20" HorizontalAlignment="Left" />
+
+            <TextBox x:Name="txtName" TextWrapping="Wrap" Visibility="Hidden"/>
+            <TextBox x:Name="txtAddress"  TextWrapping="Wrap"  Visibility="Hidden"/>
+            <TextBox x:Name="txtEmail"  TextWrapping="Wrap"   Visibility="Hidden"/>
+            <TextBox x:Name="txtAge"  TextWrapping="Wrap"  Visibility="Hidden"/>
+            <TextBox x:Name="txtBirthday"  TextWrapping="Wrap" Visibility="Hidden"/>
+
+        </StackPanel>
+    </StackPanel>
+</Window>
